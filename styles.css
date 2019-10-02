@@ -37,6 +37,14 @@ font-size: 125%;
     text-align: center;
 }
 
+#bom {
+  text-align: center;
+}
+
+#bom-cover {
+  width: 10%;
+}
+
 #bom-form {
     text-align: center;
   }

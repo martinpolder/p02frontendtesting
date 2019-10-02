@@ -13,9 +13,9 @@
     <!-- Links for the <head> in main.handelbars  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/css/normalize.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.5.3/css/foundation.css">
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
 
-        <!-- this will obviously change to the proper route in the directory -->
+    <!-- this will obviously change to the proper route in the directory -->
     <link rel="stylesheet" href="styles.css">
 
 </head>
@@ -43,7 +43,7 @@
             </div>
         </div>
 
-       <!-- orbit  / splash image for now-->
+        <!-- orbit  / splash image for now-->
         <div id="splash-img">
             <img src="https://i.imgur.com/ZKxLlm3.jpg" alt="a beatiful old library">
         </div>
@@ -84,8 +84,8 @@
         </div>
         <hr />
 
-     <!-- rendering of Book of month ajax call  -->
-     <script>
+        <!-- rendering of Book of month ajax call  -->
+        <script>
             $.get("https://www.googleapis.com/books/v1/volumes?q=subject:fiction+inauthor:rowling&key=AIzaSyANAvNRCQ95S0TuXsGL9G_-TZ9RYsywtaA")
                 .done(function (books) {
                     // $("#book-month").text(books.items[0].volumeInfo.title);
@@ -96,12 +96,23 @@
             <div class="large-12 cell bom" id="bom">
                 <div id="book-month">
                     <h5>Book of the month</h5>
-                    {{!-- <img src= {{this.book.volumeInfo.imageLinks}}> --}}
-                    <H6>Title: {{this.book.volumeInfo.title}}</H6>
-                    <H6>Authors: {{this.book.volumeInfo.authors}}</H6>
-                    <H6>Genre: {{this.book.volumeInfo.categories}}</H6>
-                    <H6>5 Star Rating: {{this.book.volumeInfo.averageRating}}</H6>
-                    <p>{{this.book.volumeInfo.description}}</p>
+                    <img id="bom-cover" src="https://images-na.ssl-images-amazon.com/images/I/81zJryVtOWL.jpg">
+                    <H6>"East of Eden"</H6>
+                    <H6>John Steinbeck</H6>
+                    <H6>Fiction}</H6>
+                    <H6>4.5/5</H6>
+                    <p>A masterpiece of Biblical scope, and the magnum opus of one of America’s most enduring authors,
+                        in a commemorative hardcover edition In his journal, Nobel Prize winner John Steinbeck called
+                        East of Eden "the first book," and indeed it has the primordial power and simplicity of myth.
+                        Set in the rich farmland of California's Salinas Valley, this sprawling and often brutal novel
+                        follows the intertwined destinies of two families—the Trasks and the Hamiltons—whose generations
+                        helplessly reenact the fall of Adam and Eve and the poisonous rivalry of Cain and Abel. The
+                        masterpiece of Steinbeck’s later years, East of Eden is a work in which Steinbeck created his
+                        most mesmerizing characters and explored his most enduring themes: the mystery of identity, the
+                        inexplicability of love, and the murderous consequences of love's absence. Adapted for the 1955
+                        film directed by Elia Kazan introducing James Dean, and read by thousands as the book that
+                        brought Oprah’s Book Club back, East of Eden has remained vitally present in American culture
+                        for over half a century.</p>
 
                 </div>
             </div>
@@ -205,7 +216,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <!-- We will also have to link the javascript for the Book of the month suggestion POST  -->
-   
+
 
 
 </body>
